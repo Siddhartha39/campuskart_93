@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Slightly larger base font size across the app */
+    --app-font-size: 16.25px; /* ~1.02x */
+  }
+
+  html {
+    font-size: var(--app-font-size);
+    scroll-behavior: smooth;
+    touch-action: manipulation;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply text-gray-800 bg-gray-50 antialiased font-medium min-h-screen overflow-x-hidden;
+    line-height: 1.6;
+    overscroll-behavior-y: contain;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  img {
+    @apply max-w-full h-auto block;
+  }
+
+  button, a, input, select, textarea {
+    -webkit-tap-highlight-color: transparent;
+    @apply transition-colors duration-200 ease-out;
+  }
+
+  @media (max-width: 768px) {
+    .animate-gradient-move,
+    .animate-core-move,
+    .animate-pulse,
+    .transition-all {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *, *::before, *::after,
+    button, a, input, select, textarea {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
+  ::selection {
+    @apply bg-blue-600 text-white;
+  }
+
+  h1 { @apply text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900; }
+  h2 { @apply text-2xl md:text-3xl font-bold tracking-tight text-gray-900; }
+  h3 { @apply text-xl md:text-2xl font-bold text-gray-900; }
+  h4 { @apply text-lg font-semibold text-gray-900; }
+  h5 { @apply text-base font-semibold text-gray-900; }
+  h6 { @apply text-sm font-semibold text-gray-900; }
+
+  a { @apply text-blue-600 hover:text-blue-700 hover:underline underline-offset-2; }
+
+  button {
+    @apply font-medium rounded-lg transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600;
+  }
+
+  input, select, textarea {
+    @apply rounded-lg border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:ring-offset-0;
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 15px;
+    }
+  }
+}
