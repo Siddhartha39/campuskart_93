@@ -25,7 +25,7 @@ export const DownloadPage: React.FC = () => {
               <p>Notes:</p>
               <ul className="list-disc ml-5 mt-2">
                 <li>Android devices may block installation from unknown sources — users must allow installation from your browser or file manager.</li>
-                <li>For Play Store distribution consider publishing there for easier installs and automatic updates.</li>
+                <li>Currently google sign in is not working on application. you need to create your account by entering your details .</li>
               </ul>
             </div>
           </div>
