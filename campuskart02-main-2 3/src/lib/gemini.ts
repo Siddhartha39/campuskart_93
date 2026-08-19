@@ -1,3 +1,5 @@
+import { computeResumeInsight } from './resumeUtils';
+
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const GEMINI_MODEL = 'gemini-2.0-flash';
 
@@ -212,6 +214,5 @@ ${payload.resumeText}`;
   }
 
   // If Gemini API is unreachable or not configured, compute enhanced heuristic insight
-  const { computeResumeInsight } = await import('./resumeUtils');
   return computeResumeInsight(payload.resumeText, payload.placement);
 };

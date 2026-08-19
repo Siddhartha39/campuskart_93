@@ -170,6 +170,8 @@ export const PlacementPage: React.FC = () => {
             Launch Resume Analyzer <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
+
+        <div className="mb-8">
           <div className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-2xl shadow-slate-900/10 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="relative flex-1">
