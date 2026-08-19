@@ -2,6 +2,7 @@
 
 <div align="center">
 
+[![Website](https://img.shields.io/badge/Website-campuskart.shop-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.campuskart.shop/)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-campuskart--93.vercel.app-00C7B7?style=for-the-badge&logo=vercel&logoColor=white)](https://campuskart-93.vercel.app)
 [![React](https://img.shields.io/badge/React%2018-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -14,7 +15,7 @@
 **A comprehensive, student-centric digital ecosystem designed to connect campus communities.**  
 Buy & Sell goods, post anonymously on Campus Whisper, find hackathon teammates, discover career placements with **AI-driven Resume ATS Analysis**, explore campus events, and manage campus interactions seamlessly.
 
-[🚀 View Live App](https://campuskart-93.vercel.app) · [✨ Features](#-key-features) · [🛠️ Tech Stack](#️-tech-stack) · [⚡ Getting Started](#-getting-started) · [📁 Project Structure](#-project-structure) · [⚙️ Environment Configuration](#️-environment-configuration)
+[🌐 Visit Website (campuskart.shop)](https://www.campuskart.shop/) · [🚀 View Live App](https://campuskart-93.vercel.app) · [✨ Features](#-key-features) · [🛠️ Tech Stack](#️-tech-stack) · [⚡ Getting Started](#-getting-started) · [📁 Project Structure](#-project-structure) · [⚙️ Environment Configuration](#️-environment-configuration)
 
 ---
 
