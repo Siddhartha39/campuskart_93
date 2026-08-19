@@ -2,10 +2,11 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { database } from '../../config/firebase';
 import { ref, onValue, push, update } from 'firebase/database';
 import { useAuth } from '../../contexts/AuthContext';
+import { Link } from 'react-router-dom';
 import { PlacementCompany, PlacementApplication } from '../../types';
 import { PlacementCard } from './PlacementCard';
 import BackButton from '../common/BackButton';
-import { Search } from 'lucide-react';
+import { Search, FileCheck, Sparkles, ArrowRight } from 'lucide-react';
 
 export const PlacementPage: React.FC = () => {
   const { currentUser } = useAuth();
@@ -147,7 +148,28 @@ export const PlacementPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="mb-8">
+        {/* AI Resume Analyzer Spotlight Banner */}
+        <div className="rounded-[2rem] border border-cyan-500/30 bg-gradient-to-r from-sky-950 via-slate-900 to-indigo-950 p-6 text-white shadow-xl mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400 text-slate-950 font-bold shrink-0 shadow-md shadow-cyan-400/20">
+              <FileCheck className="h-6 w-6 text-slate-950" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold uppercase tracking-widest text-cyan-300">New Feature</span>
+                <span className="rounded-full bg-cyan-400/20 px-2 py-0.5 text-[10px] font-semibold text-cyan-200">Gemini 2.0 AI</span>
+              </div>
+              <h2 className="text-lg font-bold text-white mt-0.5">AI Resume ATS & Requirements Checker</h2>
+              <p className="text-xs text-slate-300 mt-0.5">Benchmark your resume directly against specific company hiring criteria and get tailored improvement points.</p>
+            </div>
+          </div>
+          <Link
+            to="/resume-analyzer"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-sky-400 px-5 py-2.5 text-xs font-bold text-slate-950 shadow-lg hover:from-cyan-300 hover:to-sky-300 transition shrink-0"
+          >
+            Launch Resume Analyzer <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
+        </div>
           <div className="rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-2xl shadow-slate-900/10 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="relative flex-1">

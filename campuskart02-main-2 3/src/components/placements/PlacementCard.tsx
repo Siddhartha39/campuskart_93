@@ -1,5 +1,6 @@
 import React from 'react';
-import { Bookmark, Calendar, FileText, MapPin, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Bookmark, Calendar, FileText, MapPin, Sparkles, FileCheck } from 'lucide-react';
 import { PlacementCompany } from '../../types';
 
 interface PlacementCardProps {
@@ -101,6 +102,12 @@ export const PlacementCard: React.FC<PlacementCardProps> = ({
           </div>
         </div>
         <div className="flex flex-wrap gap-2">
+          <Link
+            to={`/resume-analyzer?placementId=${placement.id}`}
+            className="inline-flex items-center gap-1.5 rounded-full border border-sky-500/40 bg-sky-500/10 px-3.5 py-2 text-xs font-semibold text-sky-300 hover:bg-sky-500/20 hover:text-white transition"
+          >
+            <FileCheck className="h-3.5 w-3.5" /> Check Resume Match
+          </Link>
           <button
             onClick={(e) => {
               e.stopPropagation();

@@ -23,6 +23,7 @@ import { TeammateFinder } from './components/teammates/TeammateFinder';
 import { CampusWhisperPage } from './components/campusWhisper/CampusWhisperPage';
 import { PlacementPage } from './components/placements/PlacementPage';
 import { PlacementDetailsPage } from './components/placements/PlacementDetailsPage';
+import { ResumeAnalyzerPage } from './components/placements/ResumeAnalyzerPage';
 import { SupportPage } from './components/support/SupportPage';
 import { DummyPage } from './components/common/DummyPage';
 import { DownloadPage } from './components/download/DownloadPage';
@@ -158,6 +159,7 @@ function AppRoutes() {
         <Route path="/campus-whisper" element={<CampusWhisperPage />} />
         <Route path="/placement" element={<PlacementPage />} />
         <Route path="/placement/:placementId" element={<PlacementDetailsPage />} />
+        <Route path="/resume-analyzer" element={<ResumeAnalyzerPage />} />
         <Route path="/support" element={
           <ProtectedRoute>
             <SupportPage />

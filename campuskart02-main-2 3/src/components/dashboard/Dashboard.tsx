@@ -8,8 +8,9 @@ import {
   Plus, 
   Calendar, 
   Users, 
-  TrendingUp,
+  TrendingUp, 
   Package,
+  FileCheck
 } from 'lucide-react';
 import CollegeSelect, { CollegeSelectValue } from '../common/CollegeSelect';
 
@@ -91,6 +92,14 @@ export const Dashboard: React.FC = () => {
       link: '/placement',
       color: 'bg-gradient-to-br from-indigo-500 to-cyan-500 hover:from-indigo-600 hover:to-cyan-600',
       textColor: 'text-indigo-600'
+    },
+    {
+      icon: FileCheck,
+      title: 'AI Resume Analyzer',
+      description: 'Benchmark resume against company specs',
+      link: '/resume-analyzer',
+      color: 'bg-gradient-to-br from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700',
+      textColor: 'text-cyan-600'
     },
     {
       icon: Calendar,

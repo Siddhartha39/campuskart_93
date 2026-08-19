@@ -20,7 +20,8 @@ import {
   Sparkles,
   TrendingUp,
   HelpCircle,
-  DownloadCloud
+  DownloadCloud,
+  FileCheck
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
@@ -34,6 +35,7 @@ export const Navbar: React.FC = () => {
     { icon: User, title: 'Profile', link: '/profile' },
     { icon: Settings, title: 'Settings', link: '/settings' },
     { icon: TrendingUp, title: 'Placements', link: '/placement' },
+    { icon: FileCheck, title: 'AI Resume Analyzer', link: '/resume-analyzer' },
     { icon: Sparkles, title: 'Campus Whisper', link: '/campus-whisper' },
     { icon: Users, title: 'Teammate Finder', link: '/teammates' },
     { icon: ShoppingCart, title: 'Buy Items', link: '/buy' },
@@ -188,6 +190,14 @@ export const Navbar: React.FC = () => {
               >
                 <TrendingUp className="h-5 w-5 text-violet-300 group-hover:text-white mr-3" />
                 Placements
+              </Link>
+              <Link
+                to="/resume-analyzer"
+                className="group flex items-center px-3 py-3 rounded-3xl text-sm font-medium text-slate-200 transition hover:bg-slate-800"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <FileCheck className="h-5 w-5 text-cyan-300 group-hover:text-white mr-3" />
+                AI Resume Analyzer
               </Link>
               <Link
                 to="/campus-whisper"

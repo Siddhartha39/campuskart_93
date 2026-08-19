@@ -4,8 +4,9 @@ import { database } from '../../config/firebase';
 import { ref, get, push } from 'firebase/database';
 import { useAuth } from '../../contexts/AuthContext';
 import { PlacementCompany } from '../../types';
-import { ExternalLink, MapPin, Calendar, Star, CheckCircle2, FileText } from 'lucide-react';
+import { ExternalLink, MapPin, Calendar, Star, CheckCircle2, FileText, Sparkles } from 'lucide-react';
 import BackButton from '../common/BackButton';
+import { ResumeAnalyzerComponent } from './ResumeAnalyzerComponent';
 
 export const PlacementDetailsPage: React.FC = () => {
   const { placementId } = useParams<{ placementId: string }>();
@@ -100,20 +101,21 @@ export const PlacementDetailsPage: React.FC = () => {
 
             <div className="mt-8 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
               <div className="space-y-6">
-                <section className="rounded-3xl border border-sky-200 bg-sky-50 p-6 shadow-sm">
-                  <div className="flex items-center gap-2 text-sky-700">
-                    <FileText className="h-5 w-5" />
-                    <h2 className="text-xl font-semibold text-slate-900">Resume ATS checker</h2>
-                  </div>
-                  <p className="mt-3 text-sm text-slate-700">This feature is currently being prepared. Resume scoring and tailored ATS suggestions will be available soon.</p>
-
-                  <div className="mt-4 rounded-2xl border border-sky-100 bg-white p-4 shadow-sm">
-                    <p className="text-sm font-semibold text-slate-900">Coming soon</p>
-                    <p className="mt-2 text-sm text-slate-700">We are working on bringing ATS-friendly resume insights to this experience. Stay tuned for the launch.</p>
-                    <div className="mt-4 rounded-xl bg-slate-50 p-3 text-sm text-slate-700">
-                      Preview insights will appear here once the checker is live.
-                    </div>
-                  </div>
+                {/* Interactive AI Resume ATS Checker tailored for this company */}
+                <section>
+                  <ResumeAnalyzerComponent
+                    placement={{
+                      id: placement.id,
+                      companyName: placement.companyName,
+                      jobDescription: placement.jobDescription || placement.description,
+                      eligibility: placement.eligibility,
+                      skills: placement.skills || [],
+                      salary: placement.salary,
+                      location: placement.location,
+                      type: placement.type,
+                    }}
+                    showCompanyHeader={false}
+                  />
                 </section>
 
 
